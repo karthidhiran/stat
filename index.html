@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Gravitytraders</title>
+</head>
+
+<body>
+  <div class="container-fluid corrector-div">
+    <nav class="navbar  sticky-top navbar-expand-lg navbar-dark  " style="background-color:lightblue;">
+      <a class="navbar-brand" href="#" style="color:darkred;"> <i class="fa fa-pencil" style="color:whitesmoke; "></i><strong>  GRAVITY BOOK WORLD</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="border: 2px solid black; background-color:lightblue;"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+
+          <li class="nav-item active">
+            <a class="nav-link " href="about.html" style="color: black;">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="gallery.html" style="color: black;">Gallery</a>
+          </li>
+          
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="color: black;">
+              Products
+            </a>
+            <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="writercorner.html">Teacher's Corner</a>
+              <a class="dropdown-item" href="artistcorner.html">Student's Corner</a>
+              <a class="dropdown-item" href="essentials.html">Others</a>
+            </div>
+          </li>
+
+        <li class="nav-item active">
+          <a class="nav-link other" href="contactus.html" tabindex="-1" aria-disabled="true"style="color: black;">Pre-Order</a>
+        </li>
+
+
+          
+
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+
+    
+
+    
+
+    <div class="container-fluid section-1 ">
+
+      <div class="row ">
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+          <h1 class="big-heading">Welcome to Gravity Book World</h1>
+
+          <button type="button" class="btn btn-home btn-outline-dark btn-lg download-button"
+            onclick="window.location.href='gallery.html';"><i class="fab fa-google-play"></i> VIEW GALLERY! </button>
+        </div>
+
+
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <img class="cta-image img-fluid" src="pic/main.jpg" alt="">
+
+          
+        </div>
+
+      </div>
+
+<span></span>
+    </div>
+<br>
+<br>
+
+
+ <h1 style="text-align: center;">NEW ARRIVALS</h1>
+
+   <br>
+   <br>
+
+
+
+
+
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="sg/3.jpg" class="center">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="sg/5.jpg" class="center">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="sg/6.jpg" class="center">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="sg/8.jpg" class="center">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="sg/9.jpg" class="center">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="sg/11.jpg" class="center">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="sg/3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Master 5 in 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="sg/5.jpg" style="width:100%" onclick="currentSlide(2)" alt="Master English">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="sg/6.jpg" style="width:100%" onclick="currentSlide(3)" alt="Dolphin eng">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="sg/8.jpg" style="width:100%" onclick="currentSlide(4)" alt="EC Science">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="sg/9.jpg" style="width:100%" onclick="currentSlide(5)" alt="Smart English">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="sg/11.jpg" style="width:100%" onclick="currentSlide(6)" alt="Magizhan Maths">
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer footer-element " id="footer">
+
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+            <!-- Content -->
+            <h6 class="text-uppercase footer-element-lg "><b>GRAVITY BOOK WORLD</b></h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;">
+            <p>The exclusive Stationery Store in Gobi</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase footer-element-lg "><b>Products</b></h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+            <p>
+              <a href="writercorner.html" class="footer-element">Teacher's Corner</a>
+            </p>
+            <p>
+              <a href="artistcorner.html" class="footer-element">Student's Corner</a>
+            </p>
+            <p>
+              <a href="essentials.html" class="footer-element">Others</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+
+
+
+
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-1 mb-md-0 mb-1">
+
+            <!-- Links -->
+            <h6 class="text-uppercase footer-element-lg "><b>Contact</b></h6>
+            <hr class=" accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 85px;">
+            <p>
+              <i class="fa fa-home mr-auto"></i> GH Road,Katchery Medu,Gobi,Erode</p>
+            <p>
+              <i class="fa fa-envelope "></i> gravitybookworldgobi@gmail.com</p>
+            <p>
+              <i class="fa fa-phone mr-auto"></i> 9385728328</p>
+            <p>
+
+            <br>  
+            <div class="embed-responsive corrector-div container-fluid iframe-div" > <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.31823610598!2d77.42975489999999!3d11.4569403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba93de84af653e1%3A0xde9b2e0df88499e5!2sGravity%20book%20world!5e0!3m2!1sen!2sin!4v1655094000379!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 ">
+        
+
+
+        <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center ">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <a href="https://www.facebook.com/login/">
+            <i class="fa fa-facebook-f footer-icon" style="font-size: xx-large;"> </i></a>
+          </a>
+        </li>
+        <li class="list-inline-item ">
+          <a class="btn-floating btn-tw mx-1">
+            <a href="https://twitter.com/login/">
+            <i class="fa fa-twitter footer-icon " style="font-size: xx-large;"> </i></a>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1" >
+          <a href="login.html" > <i class="fa fa-instagram footer-icon" style="font-size: xx-large;"> </i></a>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+        <a href="index.html" class="footer-element" style="color: blue;"> GravityBookWorld</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
